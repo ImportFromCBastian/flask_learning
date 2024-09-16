@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "flask_learning"
+version = "0.1.0"
+description = "quick setup to ORM"
+authors = ["Sebastian Hernandez <sebshndz2001@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.3"
+Flask = "^3.0.3"
+psycopg2-binary = "^2.9.9"
+flask-sqlalchemy = "^3.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
