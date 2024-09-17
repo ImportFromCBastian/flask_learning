@@ -1,6 +1,7 @@
 from flask import Flask
 from src.core import database
 from src.core.config import config
+from src.core import seeds
 
 
 def create_app(env="development", static_folder="static"):
@@ -26,5 +27,11 @@ def create_app(env="development", static_folder="static"):
     @app.cli.command(name="reset-db")
     def reset():
         database.reset_db()
+
+    @app.cli.command(name="seed-db")
+    def seed():
+        print("Seeding the database...🌱")
+        seeds.grow()
+        print("Database seeded.👍")
 
     return app

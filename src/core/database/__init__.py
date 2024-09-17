@@ -21,6 +21,8 @@ def config(app):
     def close_session(exception=None):
         db.session.close()
 
+    return app
+
 
 # Commands
 
