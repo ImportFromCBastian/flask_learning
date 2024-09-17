@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" 
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+		<title>Flask Playground</title>
+
+	</head>
+	<body>
+    <h1 class="text-3xl font-bold">List of issues</h1>
+    <ul>
+      {% for issue in issues %}
+      <div class="flex space-x-1">
+
+        <li >{{ issue.title }}</li>
+        <li >{{ issue.user.name }}</li>
+        <li >{{ issue.description }}</li>
+      </div>
+      {% endfor %}
+  </body>
+</html>
